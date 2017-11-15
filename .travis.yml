@@ -1,3 +1,14 @@
+sudo: required
+install: make get-deps
+
+compiler: 
+   - gcc
+
+language: cpp
+
+script:
+   - make
+
 env:
   global:
    # The next declaration is the encrypted COVERITY_SCAN_TOKEN, created
@@ -16,3 +27,5 @@ addons:
     build_command_prepend: "make clean"
     build_command:   "make"
     branch_pattern: coverity_scan
+
+
